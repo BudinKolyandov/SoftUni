@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zad1", "zad1\zad1.csproj", "{1AE6D46C-3025-474D-8F31-BC2197151382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad2", "zad2\zad2.csproj", "{FF8C5502-3D02-448C-B390-B89B604B0116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zad2", "zad2\zad2.csproj", "{FF8C5502-3D02-448C-B390-B89B604B0116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excersice3", "Excersice3\Excersice3.csproj", "{52FCE0C8-EF0B-45B3-BB9D-966FDC5F3DC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excersice3", "Excersice3\Excersice3.csproj", "{52FCE0C8-EF0B-45B3-BB9D-966FDC5F3DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excersice4", "Excersice4\Excersice4.csproj", "{5195CECC-C697-417C-940E-A7A891632314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excersice4", "Excersice4\Excersice4.csproj", "{5195CECC-C697-417C-940E-A7A891632314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C6F8ACCD-C676-416C-BDAA-68E948272C4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5195CECC-C697-417C-940E-A7A891632314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5195CECC-C697-417C-940E-A7A891632314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5195CECC-C697-417C-940E-A7A891632314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F8ACCD-C676-416C-BDAA-68E948272C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F8ACCD-C676-416C-BDAA-68E948272C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F8ACCD-C676-416C-BDAA-68E948272C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F8ACCD-C676-416C-BDAA-68E948272C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
