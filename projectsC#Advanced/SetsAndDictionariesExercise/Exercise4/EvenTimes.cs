@@ -9,7 +9,6 @@ namespace Exercise4
         {
             HashSet<int> set = new HashSet<int>();
             int n = int.Parse(Console.ReadLine());
-            int evenNum = int.MinValue;
             Dictionary<int, int> dict = new Dictionary<int, int>();
             for (int i = 0; i < n; i++)
             {
