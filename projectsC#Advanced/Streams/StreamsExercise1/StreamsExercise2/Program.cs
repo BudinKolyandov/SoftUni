@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace StreamsExercise2
 {
@@ -17,23 +18,10 @@ namespace StreamsExercise2
                 string currentLine = sr.ReadLine();
                 while (currentLine != null)
                 {
-                    for (int i = 0; i < currentLine.Length; i++)
-                    {
-                        if (currentLine[i] == ' ')
-                        {
-                            continue;
-                        }
-                        else if (currentLine[i] == '-' || currentLine[i] == '.'|| currentLine[i] == ',' ||
-                            currentLine[i] == '\'' || currentLine[i] == '!' || currentLine[i] == '?')
-                        {
-                            punctuations++;
-                        }
-                        else
-                        {
-                            letters++;
-                        }
-                    }
-                    Console.WriteLine($"Line {count}: {currentLine} ({letters})/({punctuations})");
+                    letters = currentLine.Count(char.IsLetter);
+                    punctuations = currentLine.Count(char.IsPunctuation);
+                    File.AppendAllText("Output.txt", $"Line {count}: {currentLine} ({letters})/({punctuations}){Environment.NewLine}");
+                    
                     letters = 0;
                     punctuations = 0;
 
