@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StreamsExercise1
 {
-    class Program
+    class EvenLines
     {
         static void Main(string[] args)
         {

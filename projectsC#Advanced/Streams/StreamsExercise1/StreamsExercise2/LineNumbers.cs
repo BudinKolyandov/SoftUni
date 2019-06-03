@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace StreamsExercise2
 {
-    class Program
+    class LineNumbers
     {
         static void Main(string[] args)
         {
