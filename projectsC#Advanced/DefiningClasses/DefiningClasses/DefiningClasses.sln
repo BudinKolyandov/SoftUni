@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreatingConstructors", "Cre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{844B23A2-C228-485E-B2C5-B5D280A32B97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpinionPoll", "OpinionPoll\OpinionPoll.csproj", "{307A7E0D-B1E7-4073-8513-DDF220AAAB8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpinionPoll", "OpinionPoll\OpinionPoll.csproj", "{307A7E0D-B1E7-4073-8513-DDF220AAAB8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateModifier", "DateModifier\DateModifier.csproj", "{2ADE76BF-0692-49F2-88CA-54BC2CF973A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateModifier", "DateModifier\DateModifier.csproj", "{2ADE76BF-0692-49F2-88CA-54BC2CF973A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedRacing", "SpeedRacing\SpeedRacing.csproj", "{E59DA289-E591-4F53-BCE1-5CC3561B6ED9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2ADE76BF-0692-49F2-88CA-54BC2CF973A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ADE76BF-0692-49F2-88CA-54BC2CF973A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ADE76BF-0692-49F2-88CA-54BC2CF973A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E59DA289-E591-4F53-BCE1-5CC3561B6ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59DA289-E591-4F53-BCE1-5CC3561B6ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59DA289-E591-4F53-BCE1-5CC3561B6ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59DA289-E591-4F53-BCE1-5CC3561B6ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
