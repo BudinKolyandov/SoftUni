@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socks", "Socks\Socks.csproj", "{BB7DBD90-CE73-4642-B439-D23816DC8329}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Socks", "Socks\Socks.csproj", "{BB7DBD90-CE73-4642-B439-D23816DC8329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoTheGarden", "DemoTheGarden\DemoTheGarden.csproj", "{0C87BC73-04ED-4BC2-9D86-790F67398D86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMakeASalad", "DemoMakeASalad\DemoMakeASalad.csproj", "{5CDA5B9B-0276-448F-AC10-BC86CEAA120E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{BB7DBD90-CE73-4642-B439-D23816DC8329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7DBD90-CE73-4642-B439-D23816DC8329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7DBD90-CE73-4642-B439-D23816DC8329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C87BC73-04ED-4BC2-9D86-790F67398D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C87BC73-04ED-4BC2-9D86-790F67398D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C87BC73-04ED-4BC2-9D86-790F67398D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C87BC73-04ED-4BC2-9D86-790F67398D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDA5B9B-0276-448F-AC10-BC86CEAA120E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDA5B9B-0276-448F-AC10-BC86CEAA120E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDA5B9B-0276-448F-AC10-BC86CEAA120E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDA5B9B-0276-448F-AC10-BC86CEAA120E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
