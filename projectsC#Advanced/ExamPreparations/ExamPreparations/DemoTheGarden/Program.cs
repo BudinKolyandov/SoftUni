@@ -8,16 +8,12 @@ namespace DemoTheGarden
         static void Main(string[] args)
         {
             int rows = int.Parse(Console.ReadLine());
-            string[][] garden = new string[rows][];
+            char[][] garden = new char[rows][];
             for (int i = 0; i < rows; i++)
             {
-                string [] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                int cols = input.Length;
-                garden[i] = new string[cols];
-                for (int j = 0; j < cols; j++)
-                {
-                    garden[i][j] = input[j];
-                }
+                char[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(char.Parse).ToArray();
+                garden[i] = input;
             }
 
             int carrots = 0;
@@ -37,109 +33,89 @@ namespace DemoTheGarden
                     int row = int.Parse(currentCommand[1]);
                     int col = int.Parse(currentCommand[2]);
                     if (row >= 0 && row < garden.Length
-                        && col>=0 && col <garden[row].Length)
+                        && col >= 0 && col < garden[row].Length)
                     {
-                        string charToHarvest = garden[row][col];
-                        switch (charToHarvest)
+                        char charToHarvest = garden[row][col];
+                        if (charToHarvest != ' ')
                         {
-                            case "C":
-                                carrots++;
-                                garden[row][col] = " ";
-                                break;
-                            case "p":
-                                potatoes++;
-                                garden[row][col] = " ";
-                                break;
-                            case "L":
-                                lettuce++;
-                                garden[row][col] = " ";
-                                break;
-                        }
+                            switch (charToHarvest)
+                            {
+                                case 'C':
+                                    carrots++;
+                                    garden[row][col] = ' ';
+                                    break;
+                                case 'P':
+                                    potatoes++;
+                                    garden[row][col] = ' ';
+                                    break;
+                                case 'L':
+                                    lettuce++;
+                                    garden[row][col] = ' ';
+                                    break;
+                            }
+                        }                        
                     }
                 }
                 if (command == "Mole")
                 {
                     int row = int.Parse(currentCommand[1]);
                     int col = int.Parse(currentCommand[2]);
-                    string direction = currentCommand[3];
+                    string direction = currentCommand[3].ToLower();
 
                     if (row >= 0 && row < garden.Length
                         && col >= 0 && col < garden[row].Length)
                     {
-                        switch (direction)
+                        if (direction == "up")
                         {
-                            case "up":
-                                for (int i = row; i >= 0; i -= 2)
+                            for (int currentRow = row; currentRow >= 0; currentRow-=2)
+                            {
+                                if (currentRow >= 0 && currentRow < garden.Length
+                                    && col >= 0 && col < garden[row].Length
+                                    && garden[currentRow][col] != ' ')
                                 {
-                                    if (col < garden[i].Length)
-                                    {
-                                        if (garden[i][col] != " ")
-                                        {
-                                            harmedVegetables++;
-                                            garden[i][col] = " ";
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }                                    
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    garden[currentRow][col] = ' ';
+                                    harmedVegetables += 1;
                                 }
-                                break;
-                            case "down":
-                                for (int i = row; i < garden.Length; i += 2)
+                            }
+                        }
+                        else if (direction == "down")
+                        {
+                            for (int currentRow = row; currentRow < garden.Length; currentRow+=2)
+                            {
+                                if (currentRow >= 0 && currentRow < garden.Length
+                                    && col >= 0 && col < garden[row].Length
+                                    && garden[currentRow][col] != ' ')
                                 {
-                                    if (col < garden[i].Length)
-                                    {
-                                        if (garden[i][col] != " ")
-                                        {
-                                            harmedVegetables++;
-                                            garden[i][col] = " ";
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    garden[currentRow][col] = ' ';
+                                    harmedVegetables += 1;
                                 }
-                                break;
-                            case "left":
-                                for (int i = col; i >= 0; i -= 2)
+                            }
+                        }
+                        else if (direction == "left")
+                        {
+                            for (int currentCol = col; currentCol >= 0; currentCol-=2)
+                            {
+                                if (row >= 0 && row < garden.Length
+                                    && currentCol >=0 && currentCol < garden[row].Length
+                                    && garden[row][currentCol] != ' ')
                                 {
-                                    if (garden[row][i] != " ")
-                                    {
-                                        harmedVegetables++;
-                                        garden[i][col] = " ";
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
+                                    garden[row][currentCol] = ' ';
+                                    harmedVegetables += 1;
                                 }
-                                break;
-                            case "right":
-                                for (int i = col; i < garden[row].Length; i += 2)
+                            }
+                        }
+                        else if (direction == "right")
+                        {
+                            for (int currentCol = col; currentCol <garden[row].Length; currentCol+=2)
+                            {
+                                if (row >= 0 && row < garden.Length
+                                    && currentCol >= 0 && currentCol < garden[row].Length
+                                    && garden[row][currentCol] != ' ')
                                 {
-                                    if (garden[row][i] != " ")
-                                    {
-                                        harmedVegetables++;
-                                        garden[row][i] = " ";
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }    
+                                    garden[row][currentCol] = ' ';
+                                    harmedVegetables += 1;
                                 }
-                                break;
-                            default:
-                                break;
+                            }
                         }
                     }
                 }
